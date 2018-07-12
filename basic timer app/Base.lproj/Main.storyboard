@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="basic_timer_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYR-nw-6Ue">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Timer App " id="5VK-iV-5jJ">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="play" id="lHb-q0-E4f">
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="M77-4C-UWj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="pause" id="R9E-0O-xgv">
+                                            <connections>
+                                                <action selector="pause:" destination="BYZ-38-t0r" id="WBs-7Q-ujT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkE-L8-GRf">
+                                <rect key="frame" x="0.0" y="729" width="375" height="49"/>
+                                <items>
+                                    <barButtonItem title="-10" id="5R9-6R-ajb">
+                                        <connections>
+                                            <action selector="minusTen:" destination="BYZ-38-t0r" id="DM8-LB-K8Q"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="17j-xc-ZNz"/>
+                                    <barButtonItem title="Reset" id="fqN-cf-Mu7">
+                                        <connections>
+                                            <action selector="reset:" destination="BYZ-38-t0r" id="cBD-rg-9wr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5zV-c5-gpi"/>
+                                    <barButtonItem title="+10" id="agT-Px-TKC">
+                                        <connections>
+                                            <action selector="plusTen:" destination="BYZ-38-t0r" id="bWG-EI-wWn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXU-Na-Td5">
+                                <rect key="frame" x="187.66666666666666" y="411" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vkE-L8-GRf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2VD-Pn-GDC"/>
+                            <constraint firstItem="vkE-L8-GRf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ndl-U5-yAO"/>
+                            <constraint firstItem="vYR-nw-6Ue" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="U9y-TV-oOn"/>
+                            <constraint firstItem="vYR-nw-6Ue" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WJV-w8-ryZ"/>
+                            <constraint firstItem="BXU-Na-Td5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="XGF-2o-nS2"/>
+                            <constraint firstItem="vkE-L8-GRf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bFr-V0-OsK"/>
+                            <constraint firstItem="BXU-Na-Td5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="v6H-o5-OYc"/>
+                            <constraint firstItem="vYR-nw-6Ue" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ytD-G0-qSn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="BXU-Na-Td5" id="A7B-hA-bkU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
